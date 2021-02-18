@@ -17,7 +17,7 @@ function displaySymbol() {
     // 1. Create an id constant that store Symbol with id debugging string 
 
     //2. Display the symbol on ui as string using toString()
-    symbolResult.innerHTML = "id.toString()";
+    symbolResult.innerHTML = `<p>${new Symbol("id debugging string")}</p>`;
 
 }
 

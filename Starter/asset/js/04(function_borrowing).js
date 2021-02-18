@@ -14,7 +14,7 @@ const Brad = {
     firstName: "Brad",
     lastName: "Bansely",
     fullName: function(ui_place, message) {
-
+        console.log('here:', ui_place, message, this)
         ui_place.innerHTML = `${message} ${this.firstName} ${this.lastName}`;
 
     }
@@ -30,7 +30,8 @@ function usingCall() {
 
     //1. Borrow fullName using call
     //2. Pass call_demo[as ui_place] , Hi I am ,[message]
-
+    ele = document.querySelector("#call_demo");
+    Brad.fullName.call(Cerscy,ele,`hi I am`);
 
 }
 
@@ -42,9 +43,11 @@ function usingApply() {
         lastName: "Snow",
     }
 
+    
     //1. Borrow fullName using apply
     //2. Pass apply_demo[as ui_place] and Hi I am ,[as message] as array
-
+    ele = document.querySelector("#apply_demo");
+    Brad.fullName.apply(Jon, [ele, `hi I am`]);
 
 }
 
@@ -58,6 +61,7 @@ function usingBind() {
 
     //1. Borrow fullName using bind
     //2. Pass bind_demo[as ui_place] , Hi I am ,[as message]
-
-
+    ele = document.querySelector("#bind_demo");
+    binded = Brad.fullName.bind(Daenerys, ele, `hi I am`);
+    binded();
 }
