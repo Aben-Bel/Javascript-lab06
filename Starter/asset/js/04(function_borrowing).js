@@ -53,7 +53,7 @@ function usingApply() {
 
 function usingBind() {
 
-    //Daenerys Person Object 
+    //Daenerys Person Objec 
     const Daenerys = {
         firstName: "Daenerys",
         lastName: "Targaryen",
@@ -65,3 +65,5 @@ function usingBind() {
     binded = Brad.fullName.bind(Daenerys, ele, `hi I am`);
     binded();
 }
+
+//
